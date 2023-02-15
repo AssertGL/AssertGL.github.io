@@ -4,13 +4,27 @@
   
   
   <entry>
-    <title></title>
+    <title>移除元素</title>
     <link href="/2023/02/15/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"/>
     <url>/2023/02/15/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</url>
     
-    <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">移除元素</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2023-02-12 23:15:04</span><br><br><span class="hljs-attr">categories:</span> <br><br><span class="hljs-bullet">-</span> <span class="hljs-string">leetcode</span><br><br><span class="hljs-attr">tags:</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">移除元素</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">数组</span><br></code></pre></td></tr></table></figure><h1 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h1><blockquote><p>核心为双指针</p></blockquote><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">快指针遍历全部数据<br>慢指针指向快指针不需要移除的数据<br>最后通过切片获取长度<br></code></pre></td></tr></table></figure><h4 id="Leetcode-27"><a href="#Leetcode-27" class="headerlink" title="Leetcode.27"></a><a href="https://leetcode.cn/problems/remove-element/submissions/">Leetcode.27</a></h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">RemoveElement</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, val <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    fast := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> ; fast &lt; <span class="hljs-built_in">len</span>(nums); fast++ &#123;<br>        <span class="hljs-keyword">if</span> nums[fast] != val &#123;<br>            nums[left] = nums[fast]<br>            left++<br>        &#125;<br>    &#125;<br>    nums = nums[:left]<br>    <span class="hljs-keyword">return</span> left<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h1><blockquote><p>核心为双指针</p></blockquote><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">快指针遍历全部数据<br>慢指针指向快指针不需要移除的数据<br>最后通过切片获取长度<br></code></pre></td></tr></table></figure><h4 id="Leetcode-27"><a href="#Leetcode-27" class="headerlink" title="Leetcode.27"></a><a href="https://leetcode.cn/problems/remove-element/submissions/">Leetcode.27</a></h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">RemoveElement</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, val <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    fast := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> ; fast &lt; <span class="hljs-built_in">len</span>(nums); fast++ &#123;<br>        <span class="hljs-keyword">if</span> nums[fast] != val &#123;<br>            nums[left] = nums[fast]<br>            left++<br>        &#125;<br>    &#125;<br>    nums = nums[:left]<br>    <span class="hljs-keyword">return</span> left<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>移除元素</tag>
+      
+      <tag>数组</tag>
+      
+    </tags>
     
   </entry>
   
@@ -33,9 +47,9 @@
     
     <tags>
       
-      <tag>二分查找</tag>
-      
       <tag>数组</tag>
+      
+      <tag>二分查找</tag>
       
     </tags>
     
