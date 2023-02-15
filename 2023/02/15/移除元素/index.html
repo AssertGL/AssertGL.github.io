@@ -16,23 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二分查找 核心为确定区间位置  对于[left, right]的左闭、右闭的区间，left&#x3D;&#x3D;right 是存在的（while 中 left &lt;&#x3D; right）  nums[mid]!&#x3D; targe,故不需要取mid  Leetcode.7041234567891011121314151617181920212223242526package arrayimport &quot;fmt&amp;qu">
+    <meta name="description" content="123456789101112title: 移除元素date: 2023-02-12 23:15:04categories: - leetcodetags:- 移除元素- 数组  移除元素 核心为双指针  123快指针遍历全部数据慢指针指向快指针不需要移除的数据最后通过切片获取长度  Leetcode.27123456789101112func RemoveElement(nums []int,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找">
-<meta property="og:url" content="http://example.com/2023/02/12/first/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/02/15/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="二分查找 核心为确定区间位置  对于[left, right]的左闭、右闭的区间，left&#x3D;&#x3D;right 是存在的（while 中 left &lt;&#x3D; right）  nums[mid]!&#x3D; targe,故不需要取mid  Leetcode.7041234567891011121314151617181920212223242526package arrayimport &quot;fmt&amp;qu">
+<meta property="og:description" content="123456789101112title: 移除元素date: 2023-02-12 23:15:04categories: - leetcodetags:- 移除元素- 数组  移除元素 核心为双指针  123快指针遍历全部数据慢指针指向快指针不需要移除的数据最后通过切片获取长度  Leetcode.27123456789101112func RemoveElement(nums []int,">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-02-12T15:15:04.000Z">
-<meta property="article:modified_time" content="2023-02-15T15:36:52.683Z">
+<meta property="article:published_time" content="2023-02-15T15:41:12.703Z">
+<meta property="article:modified_time" content="2023-02-15T15:46:25.640Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="二分查找">
-<meta property="article:tag" content="数组">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>二分查找 - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="二分查找"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -209,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-12 23:15" pubdate>
-          February 12, 2023 pm
+        <time datetime="2023-02-15 23:41" pubdate>
+          February 15, 2023 pm
         </time>
       </span>
     
@@ -221,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          941 words
+          341 words
         
       </span>
     
@@ -232,7 +230,7 @@
         
         
         
-          8 mins
+          3 mins
         
       </span>
     
@@ -270,29 +268,20 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">二分查找</h1>
+            <h1 style="display: none"></h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><blockquote>
-<p>核心为确定区间位置</p>
-</blockquote>
-<pre><code class="hljs">对于[left, right]的左闭、右闭的区间，left==right 是存在的（while 中 left &lt;= right）
+                <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">移除元素</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2023-02-12 23:15:04</span><br><br><span class="hljs-attr">categories:</span> <br><br><span class="hljs-bullet">-</span> <span class="hljs-string">leetcode</span><br><br><span class="hljs-attr">tags:</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">移除元素</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-string">数组</span><br></code></pre></td></tr></table></figure>
 
-nums[mid]!= targe,故不需要取mid
-</code></pre>
-<h4 id="Leetcode-704"><a href="#Leetcode-704" class="headerlink" title="Leetcode.704"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-search/submissions">Leetcode.704</a></h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> array<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Search</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, target <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    right := <span class="hljs-built_in">len</span>(nums) - <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> left &lt;= right &#123;<br>        mid := left + (right-left)/<span class="hljs-number">2</span><br>        fmt.Printf(<span class="hljs-string">&quot;mid is %d\n&quot;</span>, mid)<br>        <span class="hljs-keyword">if</span> nums[mid] == target &#123;<br>            <span class="hljs-keyword">return</span> mid<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &lt; target &#123;<br>            left = mid + <span class="hljs-number">1</span><br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &gt; target &#123;<br>            right = mid - <span class="hljs-number">1</span><br>        &#125;<br><br>    &#125;<br>    fmt.Printf(<span class="hljs-string">&quot;left is %d, right is %d\n&quot;</span>, left, right)<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h4 id="Leetcode-35"><a href="#Leetcode-35" class="headerlink" title="Leetcode.35"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/">Leetcode.35</a></h4><blockquote>
-<ol>
-<li><p>因为能大于最大值或小于最小值，说明可以为闭区间</p>
-</li>
-<li><p><code>return right + 1</code>  因为此时left &gt; right 那说明right 为最小值，故index为 right + 1</p>
-</li>
-</ol>
+<h1 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h1><blockquote>
+<p>核心为双指针</p>
 </blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">searchInsert</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, target <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    right := <span class="hljs-built_in">len</span>(nums) - <span class="hljs-number">1</span><br>    mid := <span class="hljs-number">0</span><br><br>    <span class="hljs-keyword">for</span> left &lt;= right &#123;<br>        mid = left + (right-left)/<span class="hljs-number">2</span><br><br>        <span class="hljs-keyword">if</span> nums[mid] == target &#123;<br>            <span class="hljs-keyword">return</span> mid<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &lt; target &#123;<br>            left = mid + <span class="hljs-number">1</span><br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &gt; target &#123;<br>            right = mid <span class="hljs-number">-1</span><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> right + <span class="hljs-number">1</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">快指针遍历全部数据<br>慢指针指向快指针不需要移除的数据<br>最后通过切片获取长度<br></code></pre></td></tr></table></figure>
+
+<h4 id="Leetcode-27"><a href="#Leetcode-27" class="headerlink" title="Leetcode.27"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/submissions/">Leetcode.27</a></h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">RemoveElement</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, val <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    fast := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> ; fast &lt; <span class="hljs-built_in">len</span>(nums); fast++ &#123;<br>        <span class="hljs-keyword">if</span> nums[fast] != val &#123;<br>            nums[left] = nums[fast]<br>            left++<br>        &#125;<br>    &#125;<br>    nums = nums[:left]<br>    <span class="hljs-keyword">return</span> left<br>&#125;<br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -300,36 +289,6 @@ nums[mid]!= targe,故不需要取mid
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/leetcode/" class="category-chain-item">leetcode</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">#二分查找</a>
-      
-        <a href="/tags/%E6%95%B0%E7%BB%84/">#数组</a>
-      
-    </div>
   
 </div>
 
@@ -339,8 +298,8 @@ nums[mid]!= targe,故不需要取mid
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>二分查找</div>
-      <div>http://example.com/2023/02/12/first/</div>
+      <div></div>
+      <div>http://example.com/2023/02/15/移除元素/</div>
     </div>
     <div class="license-meta">
       
@@ -352,7 +311,7 @@ nums[mid]!= targe,故不需要取mid
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>February 12, 2023</div>
+          <div>February 15, 2023</div>
         </div>
       
       
@@ -384,18 +343,12 @@ nums[mid]!= targe,故不需要取mid
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/15/%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/12/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/02/12/first/" title="二分查找">
+                        <span class="hidden-mobile">二分查找</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
