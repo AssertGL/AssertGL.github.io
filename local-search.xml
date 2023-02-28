@@ -5,6 +5,31 @@
   
   <entry>
     <title>链表</title>
+    <link href="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/"/>
+    <url>/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><blockquote><p>同名结构体也需要引用</p></blockquote><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">make_linarray</span><span class="hljs-params">()</span></span> *linkarray.ListNode &#123;<br>head := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>r := head<br><span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1</span>; i++ &#123;<br><span class="hljs-built_in">new</span> := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>r.Next = <span class="hljs-built_in">new</span><br>r = r.Next<br>&#125;<br><span class="hljs-keyword">return</span> head<br>&#125;<br></code></pre></td></tr></table></figure><h4 id="Leetcode-207"><a href="#Leetcode-207" class="headerlink" title="Leetcode.207"></a><a href="https://leetcode.cn/problems/reverse-linked-list/">Leetcode.207</a></h4><p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png" alt="image-20230228212315772"></p><blockquote><ol><li>需要2个指针，1个指向当前元素，另一个指向下一个元素</li><li>需要一个临时指针，存储下一个的值</li><li>return pre即可，可以减少for的判断条件</li></ol></blockquote><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverseList</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>cur := head<br><span class="hljs-keyword">var</span> pre *ListNode<br><span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span>&#123;<br>temp := cur.Next<br>cur.Next = pre<br>pre = cur<br>cur = temp<br>&#125;<br><span class="hljs-keyword">return</span> pre<br>&#125;<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>leetcode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>链表</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>链表</title>
     <link href="/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/"/>
     <url>/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/</url>
     

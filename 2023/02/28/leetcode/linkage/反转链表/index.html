@@ -19,17 +19,17 @@
     <meta name="description" content="链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarray">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表">
-<meta property="og:url" content="http://example.com/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/index.html">
+<meta property="og:url" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarray">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230222220244042.png">
-<meta property="article:published_time" content="2023-02-22T13:15:04.000Z">
-<meta property="article:modified_time" content="2023-02-22T14:02:46.657Z">
+<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png">
+<meta property="article:published_time" content="2023-02-28T13:15:04.000Z">
+<meta property="article:modified_time" content="2023-02-28T13:26:05.279Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230222220244042.png">
+<meta name="twitter:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png">
   
   
   
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-22 21:15" pubdate>
-          February 22, 2023 pm
+        <time datetime="2023-02-28 21:15" pubdate>
+          February 28, 2023 pm
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          928 words
+          488 words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          8 mins
+          5 mins
         
       </span>
     
@@ -281,16 +281,15 @@
 </blockquote>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">make_linarray</span><span class="hljs-params">()</span></span> *linkarray.ListNode &#123;<br>	head := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>	r := head<br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1</span>; i++ &#123;<br>		<span class="hljs-built_in">new</span> := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>		r.Next = <span class="hljs-built_in">new</span><br>		r = r.Next<br>	&#125;<br>	<span class="hljs-keyword">return</span> head<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h4 id="Leetcode-203"><a href="#Leetcode-203" class="headerlink" title="Leetcode.203"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-linked-list-elements/submissions/">Leetcode.203</a></h4><p><img src="/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230222220244042.png" srcset="/img/loading.gif" lazyload alt="image-20230222220244042"></p>
+<h4 id="Leetcode-207"><a href="#Leetcode-207" class="headerlink" title="Leetcode.207"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">Leetcode.207</a></h4><p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png" srcset="/img/loading.gif" lazyload alt="image-20230228212315772"></p>
 <blockquote>
-<p>需要额外处理头节点需要删除的状态</p>
+<ol>
+<li>需要2个指针，1个指向当前元素，另一个指向下一个元素</li>
+<li>需要一个临时指针，存储下一个的值</li>
+<li>return pre即可，可以减少for的判断条件</li>
+</ol>
 </blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">removeElements</span><span class="hljs-params">(head *ListNode, val <span class="hljs-type">int</span>)</span></span> *ListNode &#123;<br>	<span class="hljs-keyword">var</span> left, right *ListNode<br>	right = head<br>	left = head<br><br>	<span class="hljs-keyword">for</span> right != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">if</span> right.Val == val &#123;<br>			right = right.Next<br>			left = left.Next<br>			<span class="hljs-keyword">continue</span><br>		&#125;<br>		<span class="hljs-keyword">if</span> right.Next != <span class="hljs-literal">nil</span> &amp;&amp; right.Next.Val == val &#123;<br>			right.Next = right.Next.Next<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			right = right.Next<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">return</span> left<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>😁创建虚拟头指针</p>
-</blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">removeElements</span><span class="hljs-params">(head *ListNode, val <span class="hljs-type">int</span>)</span></span> *ListNode &#123;<br>    dummyHead := &amp;ListNode&#123;&#125;<br>    dummyHead.Next = head<br>    cur := dummyHead<br>    <span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span> &amp;&amp; cur.Next != <span class="hljs-literal">nil</span> &#123;<br>        <span class="hljs-keyword">if</span> cur.Next.Val == val &#123;<br>            cur.Next = cur.Next.Next<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            cur = cur.Next<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> dummyHead.Next<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverseList</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>	cur := head<br>	<span class="hljs-keyword">var</span> pre *ListNode<br>	<span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span>&#123;<br>		temp := cur.Next<br>		cur.Next = pre<br>		pre = cur<br>		cur = temp<br>	&#125;<br>	<span class="hljs-keyword">return</span> pre<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 
                 
@@ -338,7 +337,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>链表</div>
-      <div>http://example.com/2023/02/22/leetcode/linkage/移除链表元素/</div>
+      <div>http://example.com/2023/02/28/leetcode/linkage/反转链表/</div>
     </div>
     <div class="license-meta">
       
@@ -350,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>February 22, 2023</div>
+          <div>February 28, 2023</div>
         </div>
       
       
@@ -382,18 +381,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="链表">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">链表</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/20/leetcode/array/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" title="滑动窗口">
-                        <span class="hidden-mobile">滑动窗口</span>
+                      <a href="/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/" title="链表">
+                        <span class="hidden-mobile">链表</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
