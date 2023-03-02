@@ -24,8 +24,10 @@
 <meta property="og:description" content="反转链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarr">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png">
+<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230301222418189.png">
+<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230302213750366.png">
 <meta property="article:published_time" content="2023-02-28T13:15:04.000Z">
-<meta property="article:modified_time" content="2023-02-28T13:29:46.442Z">
+<meta property="article:modified_time" content="2023-03-02T13:40:45.092Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          490 words
+          1.2k words
         
       </span>
     
@@ -233,7 +235,7 @@
         
         
         
-          5 mins
+          10 mins
         
       </span>
     
@@ -290,6 +292,22 @@
 </ol>
 </blockquote>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverseList</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>	cur := head<br>	<span class="hljs-keyword">var</span> pre *ListNode<br>	<span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span>&#123;<br>		temp := cur.Next<br>		cur.Next = pre<br>		pre = cur<br>		cur = temp<br>	&#125;<br>	<span class="hljs-keyword">return</span> pre<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h1 id="交换链表节点"><a href="#交换链表节点" class="headerlink" title="交换链表节点"></a>交换链表节点</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">Leetcode.24</a></p>
+<p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230301222418189.png" srcset="/img/loading.gif" lazyload alt="image-20230301222418189"></p>
+<blockquote>
+<p>HEAD-&gt;A-&gt;B</p>
+<p>主要通过引入头节点来操作A和B</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">SwapPairs</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>	newhead := &amp;ListNode&#123;Next: head&#125;<br>	cur := newhead<br>	<span class="hljs-keyword">for</span> head != <span class="hljs-literal">nil</span> &amp;&amp; head.Next != <span class="hljs-literal">nil</span> &#123;<br>		cur.Next = head.Next<br>		right := head.Next.Next<br><br>		head.Next.Next = head<br>		head.Next = right<br><br>		cur = head<br>		head = right<br><br>	&#125;<br>	<span class="hljs-keyword">return</span> newhead.Next<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="Leetcode-19"><a href="#Leetcode-19" class="headerlink" title="Leetcode.19"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">Leetcode.19</a></h3><p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230302213750366.png" srcset="/img/loading.gif" lazyload alt="image-20230302213750366"></p>
+<blockquote>
+<p>类似于滑动窗口。</p>
+<p>1.两个指针相隔固定的距离<code>n</code>。</p>
+<p>2.当一个指针移到最后时，自然另一个指针就是要被删除的节点的前一个</p>
+</blockquote>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs coq">func RemoveNthFromEnd(head *ListNode, n int) *ListNode &#123;<br>	newhead := &amp;ListNode&#123;<span class="hljs-keyword">Next</span>: head&#125;<br>	<span class="hljs-built_in">left</span> := newhead<br>	<span class="hljs-built_in">right</span> := newhead<br><br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span>; i &lt;= n; i++ &#123;<br>		<span class="hljs-built_in">left</span> = <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span><br>	&#125;<br><br>	<span class="hljs-keyword">for</span> <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span> != nil &#123;<br>		<span class="hljs-built_in">left</span> = <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span><br>		<span class="hljs-built_in">right</span> = <span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span><br>	&#125;<br>	<span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span> = <span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span>.<span class="hljs-keyword">Next</span><br>	<span class="hljs-keyword">return</span> newhead<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
