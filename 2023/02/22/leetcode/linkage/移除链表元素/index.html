@@ -24,8 +24,9 @@
 <meta property="og:description" content="链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarray">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230222220244042.png">
+<meta property="og:image" content="http://example.com/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230304182524913.png">
 <meta property="article:published_time" content="2023-02-22T13:15:04.000Z">
-<meta property="article:modified_time" content="2023-02-22T14:02:46.657Z">
+<meta property="article:modified_time" content="2023-03-04T10:33:35.460Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary_large_image">
@@ -222,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          928 words
+          1.4k words
         
       </span>
     
@@ -233,7 +234,7 @@
         
         
         
-          8 mins
+          12 mins
         
       </span>
     
@@ -291,6 +292,19 @@
 <p>😁创建虚拟头指针</p>
 </blockquote>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">removeElements</span><span class="hljs-params">(head *ListNode, val <span class="hljs-type">int</span>)</span></span> *ListNode &#123;<br>    dummyHead := &amp;ListNode&#123;&#125;<br>    dummyHead.Next = head<br>    cur := dummyHead<br>    <span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span> &amp;&amp; cur.Next != <span class="hljs-literal">nil</span> &#123;<br>        <span class="hljs-keyword">if</span> cur.Next.Val == val &#123;<br>            cur.Next = cur.Next.Next<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            cur = cur.Next<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> dummyHead.Next<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="Leetcode-142"><a href="#Leetcode-142" class="headerlink" title="Leetcode.142"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">Leetcode.142</a></h3><p><img src="/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/image-20230304182524913.png" srcset="/img/loading.gif" lazyload alt="image-20230304182524913"></p>
+<blockquote>
+<ol>
+<li><p>快慢指针如果快指针能追上慢指针，说明必定有环</p>
+</li>
+<li><p>fast可以直接走2步，这样只是循环的圈数变多，但肯定能某一个时刻相遇</p>
+</li>
+<li><p>环开始位置一定等于<br>$$<br>x&#x3D; (n-1)(y+z) + z<br>$$<br>x 表示链表起始到环开始位置，y表示环开始位置到快慢指针相遇点， z表示快慢指针相遇点到环开始位置</p>
+</li>
+</ol>
+</blockquote>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs autoit"><span class="hljs-keyword">func</span> <span class="hljs-title function_">detectCycle</span><span class="hljs-params">(head *ListNode)</span> *<span class="hljs-title function_">ListNode</span> &#123;<br>	fast := head<br>	slow := head<br><br>	<span class="hljs-keyword">for</span> fast != nil &amp;&amp; fast.<span class="hljs-keyword">Next</span> != nil &#123;<br>		slow = slow.<span class="hljs-keyword">Next</span><br>		fast = fast.<span class="hljs-keyword">Next</span>.<span class="hljs-keyword">Next</span><br>		<span class="hljs-keyword">if</span> fast == slow &#123;<br>			<span class="hljs-keyword">for</span> slow != head &#123;<br>				slow = slow.<span class="hljs-keyword">Next</span><br>				head = head.<span class="hljs-keyword">Next</span><br>			&#125;<br>			<span class="hljs-keyword">return</span> head<br><br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> nil<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -382,9 +396,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="链表">
+                      <a href="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="反转链表">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">链表</span>
+                        <span class="hidden-mobile">反转链表</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
