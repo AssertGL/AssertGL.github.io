@@ -16,26 +16,24 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="反转链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarr">
+    <meta name="description" content="Hash hash通过hash表来计数，适合比较2个type是否元素个数相同  Leetcode.242 123456789101112131415161718192021222324252627282930313233343536func IsAnagram(s string, t string) bool &amp;#123;	result :&#x3D; map[string]int&amp;#123;&amp;#125;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="反转链表">
-<meta property="og:url" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/index.html">
+<meta property="og:title" content="hash">
+<meta property="og:url" content="http://example.com/2023/03/05/leetcode/hash/hash/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="反转链表 同名结构体也需要引用  12345678910func make_linarray() *linkarray.ListNode &amp;#123;	head :&#x3D; &amp;linkarray.ListNode&amp;#123;Val: 7, Next: nil&amp;#125;	r :&#x3D; head	for i :&#x3D; 0; i &lt; 1; i++ &amp;#123;		new :&#x3D; &amp;linkarr">
+<meta property="og:description" content="Hash hash通过hash表来计数，适合比较2个type是否元素个数相同  Leetcode.242 123456789101112131415161718192021222324252627282930313233343536func IsAnagram(s string, t string) bool &amp;#123;	result :&#x3D; map[string]int&amp;#123;&amp;#125;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png">
-<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230301222418189.png">
-<meta property="og:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230302213750366.png">
-<meta property="article:published_time" content="2023-02-28T13:15:04.000Z">
-<meta property="article:modified_time" content="2023-03-04T10:24:15.600Z">
+<meta property="og:image" content="http://example.com/2023/03/05/leetcode/hash/hash/image-20230305211547996.png">
+<meta property="article:published_time" content="2023-03-05T13:15:04.000Z">
+<meta property="article:modified_time" content="2023-03-05T13:15:49.510Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="链表">
+<meta property="article:tag" content="hash">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png">
+<meta name="twitter:image" content="http://example.com/2023/03/05/leetcode/hash/hash/image-20230305211547996.png">
   
   
   
-  <title>反转链表 - Hexo</title>
+  <title>hash - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="反转链表"></span>
+            <span id="subtitle" data-typed-text="hash"></span>
           
         </div>
 
@@ -212,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-28 21:15" pubdate>
-          February 28, 2023 pm
+        <time datetime="2023-03-05 21:15" pubdate>
+          March 5, 2023 pm
         </time>
       </span>
     
@@ -224,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k words
+          1.1k words
         
       </span>
     
@@ -235,7 +233,7 @@
         
         
         
-          10 mins
+          9 mins
         
       </span>
     
@@ -273,41 +271,26 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">反转链表</h1>
+            <h1 style="display: none">hash</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><blockquote>
-<p>同名结构体也需要引用</p>
+                <h1 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h1><blockquote>
+<p>hash通过hash表来计数，适合比较2个type是否元素个数相同</p>
 </blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">make_linarray</span><span class="hljs-params">()</span></span> *linkarray.ListNode &#123;<br>	head := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>	r := head<br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1</span>; i++ &#123;<br>		<span class="hljs-built_in">new</span> := &amp;linkarray.ListNode&#123;Val: <span class="hljs-number">7</span>, Next: <span class="hljs-literal">nil</span>&#125;<br>		r.Next = <span class="hljs-built_in">new</span><br>		r = r.Next<br>	&#125;<br>	<span class="hljs-keyword">return</span> head<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="Leetcode-242"><a href="#Leetcode-242" class="headerlink" title="Leetcode.242"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-anagram/">Leetcode.242</a></h4><p><img src="/2023/03/05/leetcode/hash/hash/image-20230305211547996.png" srcset="/img/loading.gif" lazyload alt="image-20230305211547996"></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">IsAnagram</span><span class="hljs-params">(s <span class="hljs-type">string</span>, t <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	result := <span class="hljs-keyword">map</span>[<span class="hljs-type">string</span>]<span class="hljs-type">int</span>&#123;&#125;<br>	<span class="hljs-keyword">for</span> _, i := <span class="hljs-keyword">range</span> s &#123;<br>		result[<span class="hljs-type">string</span>(i)] += <span class="hljs-number">1</span><br>	&#125;<br><br>	<span class="hljs-keyword">for</span> _, i := <span class="hljs-keyword">range</span> t &#123;<br>		_, status := result[<span class="hljs-type">string</span>(i)]<br>		<span class="hljs-keyword">if</span> status &#123;<br>			result[<span class="hljs-type">string</span>(i)] -= <span class="hljs-number">1</span><br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">for</span> key := <span class="hljs-keyword">range</span> result &#123;<br>		<span class="hljs-keyword">if</span> result[key] != <span class="hljs-number">0</span> &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">IsAnagram2</span><span class="hljs-params">(s <span class="hljs-type">string</span>, t <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	result := [<span class="hljs-number">26</span>]<span class="hljs-type">int</span>&#123;&#125;<br>	<span class="hljs-keyword">for</span> _, i := <span class="hljs-keyword">range</span> s &#123;<br>		result[i-<span class="hljs-type">rune</span>(<span class="hljs-string">&#x27;a&#x27;</span>)] += <span class="hljs-number">1</span><br>	&#125;<br><br>	<span class="hljs-keyword">for</span> _, i := <span class="hljs-keyword">range</span> t &#123;<br>		result[i-<span class="hljs-type">rune</span>(<span class="hljs-string">&#x27;a&#x27;</span>)] -= <span class="hljs-number">1</span><br>	&#125;<br><br>	<span class="hljs-keyword">return</span> result == [<span class="hljs-number">26</span>]<span class="hljs-type">int</span>&#123;&#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-<h4 id="Leetcode-207"><a href="#Leetcode-207" class="headerlink" title="Leetcode.207"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">Leetcode.207</a></h4><p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230228212315772.png" srcset="/img/loading.gif" lazyload alt="image-20230228212315772"></p>
-<blockquote>
+<h4 id="Leetcode-35"><a href="#Leetcode-35" class="headerlink" title="Leetcode.35"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/search-insert-position/">Leetcode.35</a></h4><blockquote>
 <ol>
-<li>需要2个指针，1个指向当前元素，另一个指向下一个元素</li>
-<li>需要一个临时指针，存储下一个的值</li>
-<li>return pre即可，可以减少for的判断条件</li>
+<li><p>因为能大于最大值或小于最小值，说明可以为闭区间</p>
+</li>
+<li><p><code>return right + 1</code>  因为此时left &gt; right 那说明right 为最小值，故index为 right + 1</p>
+</li>
 </ol>
 </blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverseList</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>	cur := head<br>	<span class="hljs-keyword">var</span> pre *ListNode<br>	<span class="hljs-keyword">for</span> cur != <span class="hljs-literal">nil</span>&#123;<br>		temp := cur.Next<br>		cur.Next = pre<br>		pre = cur<br>		cur = temp<br>	&#125;<br>	<span class="hljs-keyword">return</span> pre<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-<h1 id="交换链表节点"><a href="#交换链表节点" class="headerlink" title="交换链表节点"></a>交换链表节点</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/swap-nodes-in-pairs/">Leetcode.24</a></p>
-<p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230301222418189.png" srcset="/img/loading.gif" lazyload alt="image-20230301222418189"></p>
-<blockquote>
-<p>HEAD-&gt;A-&gt;B</p>
-<p>主要通过引入头节点来操作A和B</p>
-</blockquote>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">SwapPairs</span><span class="hljs-params">(head *ListNode)</span></span> *ListNode &#123;<br>	newhead := &amp;ListNode&#123;Next: head&#125;<br>	cur := newhead<br>	<span class="hljs-keyword">for</span> head != <span class="hljs-literal">nil</span> &amp;&amp; head.Next != <span class="hljs-literal">nil</span> &#123;<br>		cur.Next = head.Next<br>		right := head.Next.Next<br><br>		head.Next.Next = head<br>		head.Next = right<br><br>		cur = head<br>		head = right<br><br>	&#125;<br>	<span class="hljs-keyword">return</span> newhead.Next<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="Leetcode-19"><a href="#Leetcode-19" class="headerlink" title="Leetcode.19"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">Leetcode.19</a></h3><p><img src="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/image-20230302213750366.png" srcset="/img/loading.gif" lazyload alt="image-20230302213750366"></p>
-<blockquote>
-<p>类似于滑动窗口。</p>
-<p>1.两个指针相隔固定的距离<code>n</code>。</p>
-<p>2.当一个指针移到最后时，自然另一个指针就是要被删除的节点的前一个</p>
-</blockquote>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs coq">func RemoveNthFromEnd(head *ListNode, n int) *ListNode &#123;<br>	newhead := &amp;ListNode&#123;<span class="hljs-keyword">Next</span>: head&#125;<br>	<span class="hljs-built_in">left</span> := newhead<br>	<span class="hljs-built_in">right</span> := newhead<br><br>	<span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span>; i &lt;= n; i++ &#123;<br>		<span class="hljs-built_in">left</span> = <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span><br>	&#125;<br><br>	<span class="hljs-keyword">for</span> <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span> != nil &#123;<br>		<span class="hljs-built_in">left</span> = <span class="hljs-built_in">left</span>.<span class="hljs-keyword">Next</span><br>		<span class="hljs-built_in">right</span> = <span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span><br>	&#125;<br>	<span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span> = <span class="hljs-built_in">right</span>.<span class="hljs-keyword">Next</span>.<span class="hljs-keyword">Next</span><br>	<span class="hljs-keyword">return</span> newhead<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">searchInsert</span><span class="hljs-params">(nums []<span class="hljs-type">int</span>, target <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">int</span> &#123;<br>    left := <span class="hljs-number">0</span><br>    right := <span class="hljs-built_in">len</span>(nums) - <span class="hljs-number">1</span><br>    mid := <span class="hljs-number">0</span><br><br>    <span class="hljs-keyword">for</span> left &lt;= right &#123;<br>        mid = left + (right-left)/<span class="hljs-number">2</span><br><br>        <span class="hljs-keyword">if</span> nums[mid] == target &#123;<br>            <span class="hljs-keyword">return</span> mid<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &lt; target &#123;<br>            left = mid + <span class="hljs-number">1</span><br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[mid] &gt; target &#123;<br>            right = mid <span class="hljs-number">-1</span><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> right + <span class="hljs-number">1</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -342,7 +325,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%93%BE%E8%A1%A8/">#链表</a>
+        <a href="/tags/hash/">#hash</a>
       
     </div>
   
@@ -354,8 +337,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>反转链表</div>
-      <div>http://example.com/2023/02/28/leetcode/linkage/反转链表/</div>
+      <div>hash</div>
+      <div>http://example.com/2023/03/05/leetcode/hash/hash/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +350,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>February 28, 2023</div>
+          <div>March 5, 2023</div>
         </div>
       
       
@@ -399,18 +382,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/05/leetcode/hash/hash/" title="hash">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">hash</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/22/leetcode/linkage/%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0/" title="链表">
-                        <span class="hidden-mobile">链表</span>
+                      <a href="/2023/02/28/leetcode/linkage/%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" title="反转链表">
+                        <span class="hidden-mobile">反转链表</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
